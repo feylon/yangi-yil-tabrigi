@@ -118,5 +118,5 @@ span.text {
   z-index: 1000;
 }
 audio{
-  display: none;
+  /* display: none; */
 }

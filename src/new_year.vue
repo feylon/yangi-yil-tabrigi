@@ -30,20 +30,12 @@
     <div class="tabrik_text">
     {{tabrik_soz}}
     </div>
-    
+    <video  src="./assets/1.mp3" loop ref="video"   ></video>
 </template>
 <script setup>
 import { useRoute } from 'vue-router';
 import {ref} from "vue";
-import {Howl, Howler} from 'howler';
 
-var sound = new Howl({
-  src: ['./assets/1.m4a']
-});
-console.log(location.pathname)
-console.log(location.pathname.split("/")[2].replace(":","").split("_").join(" "))
-
-// let name = ref((str.split("http://localhost:5173/happy/")[0]).split("/xato/:")[1])
 let router = useRoute();
 let tabrik = `Assalomu alaykum, hurmatli ${location.pathname.split("/")[2].replace(":","").split("_").join(" ")}. Sizni kirib kelayotgan 2024-yil bilan samimiy muborakbod etaman. Ushbu yaqinlashib kelayotgan yangi 2024-yil sizga omadli va barokatli kelsin, oilaviy baxt hamda yuqori kayfiyat yil davomida sizni va yaqinlaringizni tark etmasin. 2024-yil barchamizga uchun muborak bo'lsin! 
 
@@ -94,7 +86,13 @@ let endTime = endDate.getTime();
 let timer2 = setInterval(hisob, 1000);
 hisob();
 // 
+let video = ref();
 
-sound.play();
+
+setInterval(() => {
+    
+   video.value.play();
+}, 1000);
+
 </script>
 <style></style>
