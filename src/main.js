@@ -1,12 +1,12 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import { createRouter,createWebHashHistory } from 'vue-router';
+import { createRouter,createWebHistory } from 'vue-router';
 import new_year from "../src/new_year.vue";
 let  router = createRouter({
-    history:createWebHashHistory(),
+    history:createWebHistory(),
     routes:[
-        {component:new_year, path:"/xato/:id"},
+        {component:new_year, path:"/happy/:id"},
         {path:"/:pathMatch(.*)*",component:new_year}
     ]
 })

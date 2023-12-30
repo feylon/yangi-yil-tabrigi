@@ -27,20 +27,45 @@
         </div>
       </div>
     </div>
+    <div class="tabrik_text">
+    {{tabrik_soz}}
+    </div>
+    
 </template>
 <script setup>
 import { useRoute } from 'vue-router';
 import {ref} from "vue";
-let str = location.pathname.split("_").join(" ")
-let name = ref((str.split("http://localhost:5173/xato/")[0]).split("/xato/:")[1])
+import {Howl, Howler} from 'howler';
+
+var sound = new Howl({
+  src: ['./assets/1.m4a']
+});
+console.log(location.pathname)
+console.log(location.pathname.split("/")[2].replace(":","").split("_").join(" "))
+
+// let name = ref((str.split("http://localhost:5173/happy/")[0]).split("/xato/:")[1])
 let router = useRoute();
+let tabrik = `Assalomu alaykum, hurmatli ${location.pathname.split("/")[2].replace(":","").split("_").join(" ")}. Sizni kirib kelayotgan 2024-yil bilan samimiy muborakbod etaman. Ushbu yaqinlashib kelayotgan yangi 2024-yil sizga omadli va barokatli kelsin, oilaviy baxt hamda yuqori kayfiyat yil davomida sizni va yaqinlaringizni tark etmasin. 2024-yil barchamizga uchun muborak bo'lsin! 
+
+Hurmat bilan Toshkent Axborot Texnologiyalari Universiteti Samarqand filiali talabasi - 
+  Ergashev Jamshid!`;
+  let tabrik_soz = ref("");
+  let i = 0;
+let timer =   setInterval(() => {
+    if(i < tabrik.length){
+
+        tabrik_soz.value +=  tabrik[i];
+        i ++;
+    }
+    else clearInterval(timer);
+  }, 80);
 // ------------------------------
  let sana = ref(0);
  let soat = ref(0);
  let minut = ref(0);
  let sekund = ref(0);
  let yangi_yil_otdi = ref("")
-function countdown() {
+function hisob() {
     let endDate = new Date(2024, 0, 1, 0, 0);
 let endTime = endDate.getTime();
 
@@ -54,7 +79,7 @@ let endTime = endDate.getTime();
   let addZeroes = (num) => (num < 10 ? `0${num}` : num);
 
   if (endTime < todayTime) {
-    clearInterval(i);
+    clearInterval(timer2);
     yangi_yil_otdi.value = "YANGI YIL KELDI !!!";
    
   } else {
@@ -66,7 +91,10 @@ let endTime = endDate.getTime();
    
   }
 }
-let i = setInterval(countdown, 1000);
-countdown();
+let timer2 = setInterval(hisob, 1000);
+hisob();
+// 
+
+sound.play();
 </script>
 <style></style>
