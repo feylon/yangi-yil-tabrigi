@@ -2,7 +2,11 @@
  <div class="wrapper">
       <div class="heading">
         <h3>Qolgan vaqt</h3>
-        <h1>2023</h1>
+        <h1>
+            <span v-if="!yangi_yil_otdi">2023</span>
+            
+            <span v-else>{{ yangi_yil_otdi }}</span>
+        </h1>
       </div>
       <div class="countdown">
         <div class="box">
@@ -35,6 +39,7 @@ let router = useRoute();
  let soat = ref(0);
  let minut = ref(0);
  let sekund = ref(0);
+ let yangi_yil_otdi = ref("")
 function countdown() {
     let endDate = new Date(2024, 0, 1, 0, 0);
 let endTime = endDate.getTime();
@@ -50,19 +55,15 @@ let endTime = endDate.getTime();
 
   if (endTime < todayTime) {
     clearInterval(i);
-    document.querySelector(
-      ".countdown"
-    ).innerHTML = `<h1>Countdown Has Expired</h1>`;
+    yangi_yil_otdi.value = "YANGI YIL KELDI !!!";
+   
   } else {
      sana.value = Math.floor(remainingTime / oneDay);
      soat.value = Math.floor((remainingTime % oneDay) / oneHr);
      minut.value = Math.floor((remainingTime % oneHr) / oneMin);
      sekund.value = Math.floor((remainingTime % oneMin) / 1000);
 
-    // dayBox.textContent = addZeroes(daysLeft);
-    // hrBox.textContent = addZeroes(hrsLeft);
-    // minBox.textContent = addZeroes(minsLeft);
-    // secBox.textContent = addZeroes(secsLeft);
+   
   }
 }
 let i = setInterval(countdown, 1000);
