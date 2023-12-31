@@ -50,7 +50,7 @@ let timer =   setInterval(() => {
         i ++;
     }
     else clearInterval(timer);
-  }, 80);
+  }, 130);
 // ------------------------------
  let sana = ref(0);
  let soat = ref(0);
