@@ -7,6 +7,7 @@ let  router = createRouter({
     history:createWebHistory(),
     routes:[
         {component:new_year, path:"/happy/:id"},
+        {component:new_year, path:"/:id"},
         {path:"/:pathMatch(.*)*",component:new_year}
     ]
 })
