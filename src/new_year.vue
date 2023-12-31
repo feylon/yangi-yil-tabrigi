@@ -3,7 +3,7 @@
       <div class="heading">
         <h3>Qolgan vaqt</h3>
         <h1>
-            <span v-if="!yangi_yil_otdi">2023</span>
+            <span v-if="!yangi_yil_otdi">2024</span>
             
             <span v-else>{{ yangi_yil_otdi }}</span>
         </h1>
