@@ -37,7 +37,7 @@ import { useRoute } from 'vue-router';
 import {ref} from "vue";
 console.log(location)
 let router = useRoute();
-let tabrik = `Assalomu alaykum, hurmatli ${location.hash.split("#/happy/:")[1].split("_").join(" ")}. Sizni kirib kelayotgan 2024-yil bilan samimiy muborakbod etaman. Ushbu yaqinlashib kelayotgan yangi 2024-yil sizga omadli va barokatli kelsin, oilaviy baxt hamda yuqori kayfiyat yil davomida sizni va yaqinlaringizni tark etmasin. 2024-yil barchamizga uchun muborak bo'lsin! 
+let tabrik = `Assalomu alaykum, hurmatli ${location.hash.split("#/happy/:")[1].split("_").join(" ")}. Sizni kirib kelayotgan 2024-yil bilan samimiy muborakbod etaman. Ushbu yaqinlashib kelayotgan yangi 2025-yil sizga omadli va barokatli kelsin, oilaviy baxt hamda yuqori kayfiyat yil davomida sizni va yaqinlaringizni tark etmasin. 2024-yil barchamizga uchun muborak bo'lsin! 
 
 Hurmat bilan Toshkent Axborot Texnologiyalari Universiteti Samarqand filiali talabasi - 
   Ergashev Jamshid!`;
@@ -58,7 +58,7 @@ let timer =   setInterval(() => {
  let sekund = ref(0);
  let yangi_yil_otdi = ref("")
 function hisob() {
-    let endDate = new Date(2024, 0, 1, 0, 0);
+    let endDate = new Date(2025, 0, 1, 0, 0);
 let endTime = endDate.getTime();
 
   let todayDate = new Date();
