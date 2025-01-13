@@ -39,8 +39,8 @@ console.log(location)
 let router = useRoute();
 let tabrik = `Assalomu alaykum, hurmatli ${location.hash.split("#/happy/:")[1].split("_").join(" ")}. Sizni kirib kelayotgan 2025-yil bilan samimiy muborakbod etaman. Ushbu yaqinlashib kelayotgan yangi 2025-yil sizga omadli va barokatli kelsin, oilaviy baxt hamda yuqori kayfiyat yil davomida sizni va yaqinlaringizni tark etmasin. 2025-yil barchamizga uchun muborak bo'lsin! 
 
-Hurmat bilan Toshkent Axborot Texnologiyalari Universiteti Samarqand filiali talabasi - 
-  Ergashev Jamshid!`;
+Buxoro davlat universiteti, 1-1KIDTM-23 guruh talabasi - 
+  Xabiyeva Gulmira !`;
   let tabrik_soz = ref("");
   let i = 0;
 let timer =   setInterval(() => {
