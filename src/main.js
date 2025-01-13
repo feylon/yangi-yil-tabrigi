@@ -10,7 +10,8 @@ let  router = createRouter({
     history:createWebHashHistory(),
     routes:[
         {path : "/akajon", component : tabrik},
-        {path : "/kurs", component : kurs}
+        {path : "/kurs", component : kurs},
+        {path : "/toga", component : ()=>import("./toga.vue")}
     ]
 })
 alert("Assalomu alaykum")
