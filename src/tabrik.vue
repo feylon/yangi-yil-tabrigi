@@ -12,7 +12,15 @@
   import { ref, onMounted } from "vue";
   
   // Matnni, typing tezligini va boshqa parametrlarni e'lon qilish
-  const fullText = ``;
+  const fullText = `Mening akajonim ❤️❤️ 
+
+Bugungi muqaddas sana  14-yanvar, Vatan himoyachilari kunida Sizlarni chin qalbimdan tabriklayman! Siz – bizning hayotimizdagi eng katta tayanchim, ishonchim va faxrim bo‘lgan insonsizlar .
+
+ Akajon, Sizning mardligingiz, donoligingiz va har birimizga mehribonlik bilan qilayotgan e’tiboringiz uchun cheksiz minnatdorman. Siz har doim o‘z oilangiz, yaqinlaringiz va Vatan uchun fidoyi bo‘lgan haqiqiy himoyachisiz.❤️❤️
+
+ Sizga bardavom sog‘lik, cheksiz baxt, tinch va osuda hayot tilayman. Har bir qadamda omad va zafarlar hamroh bo‘lsin. Yashayotgan har kuningiz quvonchga to‘lsin, qalbingiz esa mangu shod bo‘lsin!
+
+Bayramingiz muborak bo‘lsin, mening eng mehribon va jasur akajonimlarim ! ❤️❤️`;
   const displayedText = ref("");
   const typingSpeed = 100; // Harflar orasidagi vaqt (ms)
   
